@@ -15,8 +15,8 @@ Preexisting tests using junit5 are also implemented.
 
 *Longdrink class*
 This is a subclass from Drink.java. 
-/newline
+<br />
 *Exception*
-/newline
+<br />
 *Collections*
 List of ingredients
