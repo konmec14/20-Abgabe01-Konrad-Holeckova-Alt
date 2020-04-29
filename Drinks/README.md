@@ -18,7 +18,7 @@ This is a subclass from Drink.java.
 <br />
 *Exception*
 <br />
-TimeToDance Exception: Dancing after 3 drinks
+ZeroPercentAlcoholException: no alcohol in longdrink
 <br />
 *Collections*
 List of ingredients
