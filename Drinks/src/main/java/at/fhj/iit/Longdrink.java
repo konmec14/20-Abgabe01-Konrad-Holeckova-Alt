@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 /**
  * Class represents a longdrink which uses liquid as part of its ingredients as well as cream and has toppings
+ *
+ * @authors Melinda Konrad, Lydia Holeckova
  */
 public class Longdrink extends Drink{
     private ArrayList<Liquid> ingredients;
@@ -17,11 +19,15 @@ public class Longdrink extends Drink{
      * @param fruitTopping a fruit on top of the longdrink
      * @param isCreamy tells, if there is cream inside the longdrink
      */
-    public Longdrink(String name, String fruitTopping, boolean isCreamy) {
+    public Longdrink(String name, String fruitTopping, boolean isCreamy) throws ZeroPercentAlcoholException{
         super(name);
         ingredients = new ArrayList<Liquid>();
         this.isCreamy = isCreamy;
         this.fruitTopping = fruitTopping;
+
+        if(getAlcoholPercent()==0){
+            throw new ZeroPercentAlcoholException();
+        }
     }
 
     /**
