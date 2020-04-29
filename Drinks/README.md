@@ -14,13 +14,17 @@ Preexisting tests using junit5 are also implemented.
 **Planned extensions**
 
 *Longdrink class*
-This is a subclass from Drink.java. 
+This is a subclass from Drink.java.
 <br />
 *Exception*
+<br />
+TimeToDance Exception: Dancing after 3 drinks
 <br />
 *Collections*
 List of ingredients
 
 **additional extensions v2.0**
 - Collection for ingredients: ArrayList
-- 
+- Double for alcohol procentage: Double
+- Fruit topping: String
+- Is creamy: Boolean
