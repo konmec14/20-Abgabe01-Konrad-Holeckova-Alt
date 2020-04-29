@@ -14,7 +14,7 @@ public class Longdrink extends Drink{
 
     /**
      * Creates a Drink object with given name, fruitTopping, cream and ingredients
-     *
+     * This method will throw the self made exception if there is no alcohol in the Longdrink
      * @param name name of the drink
      * @param fruitTopping a fruit on top of the longdrink
      * @param isCreamy tells, if there is cream inside the longdrink
@@ -31,9 +31,18 @@ public class Longdrink extends Drink{
     }
 
     /**
+     * Method fills ingredients - list
+     *
+     * @param l liquid that will be added to the ingredients
+     */
+    public void add(Liquid l) {
+        this.ingredients.add(l);
+    }
+
+    /**
      * Gets the volume of the ingredients and adds them together and returns that
      *
-     * @return
+     * @return summ of all the volumes
      */
     @Override
     public double getVolume() {
@@ -47,7 +56,7 @@ public class Longdrink extends Drink{
     /**
      * Gets the mean of the alcohol percentages of the ingredients and returns that
      *
-     * @return
+     * @return sum of alcohol percentages divided by the number of liquids
      */
     @Override
     public double getAlcoholPercent() {
@@ -61,10 +70,60 @@ public class Longdrink extends Drink{
     /**
      *  checks if the longdrink is alcoholic
      *
-     * @return
+     * @return always true
      */
     @Override
     public boolean isAlcoholic() {
         return true;
     }
+
+    /**
+     * Returns ingredients
+     *
+     * @return the list of liquids in the longdrink
+     */
+    public ArrayList<Liquid> getIngredients() {
+        return ingredients;
+    }
+    /**
+     * Uses external list of liquids to fill ingredients - list
+     *
+     * @param ingredients
+     */
+    public void setIngredients(ArrayList<Liquid> ingredients) {
+        this.ingredients = ingredients;
+    }
+    /**
+     * Returns Fruit topping
+     *
+     * @return fruitTopping a fruit on top of the longdrink
+     */
+    public String getFruitTopping() {
+        return fruitTopping;
+    }
+    /**
+     * Sets Fruit topping
+     *
+     * @param fruitTopping a fruit on top of the longdrink
+     */
+    public void setFruitTopping(String fruitTopping) {
+        this.fruitTopping = fruitTopping;
+    }
+    /**
+     * Checks if cream is part of the longdrink
+     *
+     * @return value of isCreamy
+     */
+    public boolean isCreamy() {
+        return isCreamy;
+    }
+    /**
+     * Sets isCreamy to true or false
+     *
+     * @return value of isCreamy
+     */
+    public void setCreamy(boolean creamy) {
+        isCreamy = creamy;
+    }
+
 }
