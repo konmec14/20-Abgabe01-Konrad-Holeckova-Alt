@@ -31,7 +31,11 @@ public class Longdrink extends Drink{
      */
     @Override
     public double getVolume() {
-        return 0;
+        double sum=0;
+        for(int i=0; i<ingredients.size(); i++){
+            sum+=ingredients.get(i).getVolume();
+        }
+        return sum;
     }
 
     /**
@@ -41,7 +45,11 @@ public class Longdrink extends Drink{
      */
     @Override
     public double getAlcoholPercent() {
-        return 0;
+        double sum=0;
+        for(int i=0; i<ingredients.size(); i++) {
+            sum+=ingredients.get(i).getAlcoholPercent();
+        }
+        return sum/ingredients.size();
     }
 
     /**
