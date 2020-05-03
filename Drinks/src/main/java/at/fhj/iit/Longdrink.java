@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * @authors Melinda Konrad, Lydia Holeckova
  */
 public class Longdrink extends Drink{
-    private ArrayList<Liquid> ingredients;
+    private ArrayList<Liquid> ingredients = new ArrayList<Liquid>();
     private String fruitTopping;
     private boolean isCreamy = false;
 
@@ -19,9 +19,9 @@ public class Longdrink extends Drink{
      * @param fruitTopping a fruit on top of the longdrink
      * @param isCreamy tells, if there is cream inside the longdrink
      */
-    public Longdrink(String name, String fruitTopping, boolean isCreamy) throws ZeroPercentAlcoholException{
+    public Longdrink(String name, String fruitTopping, boolean isCreamy, ArrayList<Liquid> ingredients) throws ZeroPercentAlcoholException{
         super(name);
-        ingredients = new ArrayList<Liquid>();
+        this.ingredients = ingredients;
         this.isCreamy = isCreamy;
         this.fruitTopping = fruitTopping;
 
