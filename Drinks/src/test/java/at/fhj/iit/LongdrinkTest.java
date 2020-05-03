@@ -15,7 +15,7 @@ public class LongdrinkTest {
     private ArrayList<Liquid> ingredients = new ArrayList<>();
 
     /**
-     * inits an alcoholic and nonalcoholic liquid for EACH test
+     * inits longdrinks and respective liquids for EACH test
      */
     @BeforeEach
     void setup() throws ZeroPercentAlcoholException {
@@ -105,7 +105,7 @@ public class LongdrinkTest {
     }
 
     @Test
-    @DisplayName("Test ingredients adder")
+    @DisplayName("Test ingredients setter")
     public void testIngredientsSetter(){
         ingredients.add(aperol);
         ingredients.add(water);
